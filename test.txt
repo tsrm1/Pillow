@@ -1,0 +1,20 @@
+Загрузка изображения на сервер и его обработка
+
+curl --location 'http://localhost:8000/files/upload' \
+--header 'Authorization: Bearer PhqjE-KLjF1mD3KA0gFLJcn-e6Fm9ZCdhCkjkuGJoIY' \
+--form 'file=@"/C:/Users/Roman/Pictures/Wallpapers/windows-11-wallpaper-1-2048x1280.jpg"' \
+--form 'resize="1920x1200"' \
+--form 'flip="vertical"' \
+--form 'grayscale="True"' \
+--form 'convert_to="png"'
+
+
+
+
+Скачивание изображения с сервера
+
+curl --location 'http://localhost:8000/files/download/wallpaper-2048x1280.jpg' \
+--header 'Authorization: Bearer PhqjE-KLjF1mD3KA0gFLJcn-e6Fm9ZCdhCkjkuGJoIY'
+
+
+
